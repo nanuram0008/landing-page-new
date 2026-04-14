@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Offer</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff3b3b;
+    font-size: 26px;
+}
+
+.offer {
+    background: #ffecec;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.timer {
+    font-size: 20px;
+    color: red;
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🔥 Limited Time Offer</h1>
+
+    <img src="https://via.placeholder.com/350x200" alt="Product">
+
+    <div class="offer">
+        <p><b>Only Today:</b> Get Special Access</p>
+        <p>Join Now & Unlock Benefits</p>
+    </div>
+
+    <div class="timer" id="countdown">00:10:00</div>
+
+    <a href="#" class="btn">👉 Join Now</a>
+
+    <p style="font-size:12px;color:gray;margin-top:15px;">
+        *Terms & Conditions Apply
+    </p>
+
+</div>
+
+<script>
+// Countdown Timer
+let time = 600;
+let countdown = document.getElementById("countdown");
+
+setInterval(() => {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    countdown.innerHTML =
+        (minutes < 10 ? "0" : "") + minutes + ":" +
+        (seconds < 10 ? "0" : "") + seconds;
+
+    if (time > 0) time--;
+}, 1000);
+</script>
+
+</body>
+</html>
